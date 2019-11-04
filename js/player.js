@@ -7,11 +7,11 @@ class Player {
         this.image = new Image();
         this.image.src = image;
 
-        this.posX = 50;
-        this.posY = gameHeight * 0.98 - this.height;
-        this.posY0 = gameHeight * 0.98 - this.height;
+        this.posX = 60;
+        this.posY = gameHeight * 1 - this.height;
+        this.posY0 = gameHeight * 1 - this.height;
         this.vy = 1;
-        this.gravity = 0;
+        this.gravity = 10;
         this.gameWidth = gameWidth;
 
         this.frames = 3;
@@ -39,14 +39,35 @@ class Player {
 
 
     move() {
+        if (this.posY <= this.posY0) {
+            this.posY += this.vy;
+            this.vy += this.gravity;
+        } else {
+            this.vy = 1;
+            this.posY = this.posY0;
+        }
 
     }
 
     animate(framesCounter) {
+        if (framesCounter % 10 === 0) {
+            this.framesIndex++;
 
+            if (this.framesIndex > 2) this.framesIndex = 0;
+        }
     }
 
     setListeners() {
+        document.addEventListener('keydown', (e) => {
+            switch (e.keyCode) {
+                case this.keys.TOP_KEY:
+                    if (this.posY >= this.posY0) {
+                        this.posY -= this.vy;
+                        this.vy -= 1;
+                    }
+                    break;
+            }
+        })
 
     }
 }
