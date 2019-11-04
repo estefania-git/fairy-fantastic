@@ -4,6 +4,7 @@ const Game = {
     width: undefined,
     height: undefined,
     fps: 60,
+    framesCounter: 0,
 
 
 
@@ -22,7 +23,7 @@ const Game = {
 
     start: function () {
         this.reset()
-        this.interval = setIntenval(() => {
+        this.interval = setInterval(() => {
             this.framesCounter++;
 
             this.clear();
@@ -32,5 +33,23 @@ const Game = {
 
         }, 1000 / this.fps)
     },
+
+
+    reset: function () {
+        this.background = new Background(this.ctx, this.width, this.height);
+    },
+
+    clear: function () {
+        this.ctx.clearRect(0, 0, this.width, this.height)
+
+    },
+
+    drawAll: function () {
+        this.background.draw();
+    },
+
+    moveAll: function () {
+        this.background.move()
+    }
 
 }

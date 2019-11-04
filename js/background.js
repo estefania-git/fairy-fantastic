@@ -6,10 +6,25 @@ class Background {
 
 
         this.image = new Image();
-        this.image.src = '../images/fotomurales-mundo-fantasia.png';
+        this.image.src = '../images/empty-background-nature-scenery_1308-32310.jpg';
 
 
         this.posX = 0;
         this.posY = 0;
+
+
+        this.vx = 4;
     }
+
+    draw() {
+        this.ctx.drawImage(this.image, this.posX, this.posY, this.width, this.height);
+        this.ctx.drawImage(this.image, this.posX + this.width, this.posY, this.width, this.height)
+    }
+
+    move() {
+        this.posX -= this.vx;
+
+        if (this.posX <= -this.width) this.posX = 0;
+    }
+
 }
