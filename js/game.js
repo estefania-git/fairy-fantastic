@@ -5,6 +5,11 @@ const Game = {
     height: undefined,
     fps: 60,
     framesCounter: 0,
+    playerKeys: {
+        TOP_KEY: 38
+
+    },
+    score: 0,
 
 
 
@@ -37,6 +42,8 @@ const Game = {
 
     reset: function () {
         this.background = new Background(this.ctx, this.width, this.height);
+        this.player = new Player(this.ctx, 50, 150, '../images/my-fairis (1).png', this.width, this.height, this.playerKeys);
+        ScoreBoard.init(this.ctx, this.score)
     },
 
     clear: function () {
@@ -46,10 +53,14 @@ const Game = {
 
     drawAll: function () {
         this.background.draw();
+        this.player.draw(this.framesCounter);
+        ScoreBoard.draw(this.score)
     },
 
     moveAll: function () {
         this.background.move()
+        this.player.move()
+
     }
 
 }
