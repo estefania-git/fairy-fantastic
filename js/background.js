@@ -6,7 +6,7 @@ class Background {
 
 
         this.image = new Image();
-        this.image.src = '../images/empty-background-nature-scenery_1308-32310.jpg';
+        this.image.src = "./images/empty-background-nature-scenery_1308-32310.jpg"
 
 
         this.posX = 0;

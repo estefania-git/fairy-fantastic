@@ -11,7 +11,7 @@ class Player {
         this.posY = gameHeight * 1 - this.height;
         this.posY0 = gameHeight * 1 - this.height;
         this.vy = 1;
-        this.gravity = 10;
+        this.gravity = 0.5;
         this.gameWidth = gameWidth;
 
         this.frames = 3;
@@ -39,13 +39,20 @@ class Player {
 
 
     move() {
-        if (this.posY <= this.posY0) {
-            this.posY += this.vy;
-            this.vy += this.gravity;
-        } else {
-            this.vy = 1;
-            this.posY = this.posY0;
-        }
+        // if (this.posY <= this.posY0) {
+        //     this.posY += this.vy;
+        //     this.vy += this.gravity;
+        // } else {
+        //     this.vy = 1;
+        //     this.posY = this.posY0;
+        // }
+          if (this.posY >= this.posY0) {
+              this.vy=1
+              this.posY=this.posY0
+          } else {
+              this.vy += this.gravity
+              this.posY += this.vy 
+          }
 
     }
 
@@ -61,10 +68,13 @@ class Player {
         document.addEventListener('keydown', (e) => {
             switch (e.keyCode) {
                 case this.keys.TOP_KEY:
-                    if (this.posY >= this.posY0) {
-                        this.posY -= this.vy;
-                        this.vy -= 1;
-                    }
+                    console.log(this.posY)
+                    console.log(this.vy)
+                    // if (this.posY >= this.posY0) {
+                        this.posY -= 5
+                        
+                        this.vy -= 10;
+                    // }
                     break;
             }
         })
