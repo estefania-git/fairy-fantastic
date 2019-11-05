@@ -5,7 +5,7 @@ class Obstacle {
         this.height = height;
 
         this.image = new Image()
-        this.image.src = "./images/output-onlinejpgtools (1).png"
+        this.image.src = "./images/example (1).png"
         this.posX = gameWidth;
         // this.posY = gameHeight * 98 - this.height;
 
