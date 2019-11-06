@@ -13,5 +13,6 @@ const ScoreBoard = {
         this.ctx.fillStyle = 'black'
         this.ctx.font = '50px sans-serif'
         this.ctx.fillText(score, 50, 50)
+
     }
 }

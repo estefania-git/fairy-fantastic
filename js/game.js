@@ -71,7 +71,7 @@ const Game = {
     },
 
     generateObstacles: function () {
-        this.obstacles.push(new Obstacle(this.ctx, 50, 50, this.width, Math.floor(Math.random() * (800 - 200) + 200)))
+        this.obstacles.push(new Obstacle(this.ctx, 60, 60, this.width, Math.floor(Math.random() * (800 - 200) + 200)))
     },
 
     gameOver: function () {
@@ -80,7 +80,7 @@ const Game = {
 
 
     isCollision: function () {
-        return this.obstacles.some(obs => (this.player.posX + 20 > obs.posX && obs.posX + obs.width > this.player.posX && this.player.posY + 100 > obs.posY && obs.posY + obs.height > this.player.posY))
+        return this.obstacles.some(obs => (this.player.posX + 20 > obs.posX && obs.posX + obs.width > this.player.posX && this.player.posY + 95 > obs.posY && obs.posY + obs.height > this.player.posY))
     },
 
 
