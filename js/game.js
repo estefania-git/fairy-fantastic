@@ -80,7 +80,7 @@ const Game = {
 
 
     isCollision: function () {
-        return this.obstacles.some(obs => (this.player.posX + this.player.width > obs.posX && obs.posX + obs.width > this.player.posX && this.player.posY + this.player.height > obs.posY && obs.posY + obs.height > this.player.posY))
+        return this.obstacles.some(obs => (this.player.posX + 20 > obs.posX && obs.posX + obs.width > this.player.posX && this.player.posY + 100 > obs.posY && obs.posY + obs.height > this.player.posY))
     },
 
 

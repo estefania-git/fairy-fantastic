@@ -22,7 +22,6 @@ class Obstacle {
 
     draw(framesCounter) {
         this.ctx.drawImage(
-            //this.image, this.posX, this.posY, this.width, this.height)
             this.image,
             this.framesIndex * Math.floor(this.image.width / this.frames),
             0,

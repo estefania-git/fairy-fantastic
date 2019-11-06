@@ -3,3 +3,14 @@ body {
     margin: 0;
     padding: 0;
 }
+
+body button {
+    font-size: 30px;
+    background-color: rgb(219, 97, 187);
+    color: #fff;
+    padding: 20px 40px;
+    border: 0;
+    box-shadow: 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
