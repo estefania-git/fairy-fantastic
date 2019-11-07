@@ -88,6 +88,14 @@ const Game = {
 
     clearObstacles: function () {
         this.obstacles = this.obstacles.filter(obstacle => (obstacle.posX >= 0))
-    }
+    },
 
+
+
+    Sound: function () {
+        let mySound = new Audio()
+        mySound.src = "/sound/b-s-o-peter-pan-la-gran-aventura.mp3"
+        mySound.play();
+        mySound.pause();
+    }
 }
