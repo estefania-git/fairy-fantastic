@@ -1,14 +1,18 @@
-body {
+* {
     padding: 0;
     margin: 0;
-    text-align: center;
+
 
 }
 
+body {
+    width: 100vw;
+    height: 100vh;
+}
 
 .logo-img {
-    width: 900px;
-    height: 500px;
+
+    height: 100vh;
 
 }
 
@@ -22,6 +26,7 @@ body button {
     box-shadow: 0;
     border-radius: 5px;
     margin-bottom: 20px;
+
 }
 
 #game-board {
@@ -29,5 +34,23 @@ body button {
     font-style: unset;
     color: white;
     font-size: 60px;
+    text-align: center;
+
+}
+
+#canvas {
+    display: none;
+}
+
+#game-over {
+    background-color: black;
+    display: none;
+    text-align: center;
+
+}
+
+
+.over-img {
+    height: 100vh;
 
 }

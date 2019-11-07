@@ -76,6 +76,8 @@ const Game = {
 
     gameOver: function () {
         clearInterval(this.interval)
+        document.querySelector('#canvas').style.display = 'none'
+        document.querySelector('#game-over').style.display = 'block'
     },
 
 
