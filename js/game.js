@@ -39,7 +39,7 @@ const Game = {
             if (this.framesCounter % 70 === 0) this.generateObstacles()
             if (this.framesCounter % 100 === 0) this.score++;
             if (this.isCollision()) this.gameOver()
-            if (this.framesCounter > 1000) this.framesCounter = 0;
+            if (this.framesCounter > 3000) this.framesCounter = 0;
         }, 1000 / this.fps)
     },
 
@@ -57,7 +57,7 @@ const Game = {
     },
 
     drawAll: function () {
-        this.background.draw();
+        this.background.draw(this.framesCounter);
         this.player.draw(this.framesCounter);
         this.obstacles.forEach(obstacle => obstacle.draw())
         ScoreBoard.draw(this.score)

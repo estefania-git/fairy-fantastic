@@ -46,13 +46,13 @@ class Player {
         //     this.vy = 1;
         //     this.posY = this.posY0;
         // }
-          if (this.posY >= this.posY0) {
-              this.vy=1
-              this.posY=this.posY0
-          } else {
-              this.vy += this.gravity
-              this.posY += this.vy 
-          }
+        if (this.posY >= this.posY0) {
+            this.vy = 1
+            this.posY = this.posY0
+        } else {
+            this.vy += this.gravity
+            this.posY += this.vy
+        }
 
     }
 
@@ -71,9 +71,9 @@ class Player {
                     console.log(this.posY)
                     console.log(this.vy)
                     // if (this.posY >= this.posY0) {
-                        this.posY -= 5
-                        
-                        this.vy -= 10;
+                    this.posY -= 5
+
+                    this.vy -= 10;
                     // }
                     break;
             }
