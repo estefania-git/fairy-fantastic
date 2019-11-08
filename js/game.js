@@ -10,6 +10,8 @@ const Game = {
 
     },
     score: 0,
+    mySound: new Audio(),
+
 
 
 
@@ -22,6 +24,7 @@ const Game = {
         this.canvas.width = this.width;
         this.canvas.height = this.height;
 
+        this.Sound();
         this.start();
     },
 
@@ -33,7 +36,7 @@ const Game = {
             this.clear();
             this.drawAll();
             this.moveAll();
-
+            // this.Sound();
 
             this.clearObstacles()
             if (this.framesCounter % 70 === 0) this.generateObstacles()
@@ -93,9 +96,10 @@ const Game = {
 
 
     Sound: function () {
-        let mySound = new Audio()
-        mySound.src = "/sound/b-s-o-peter-pan-la-gran-aventura.mp3"
-        mySound.play();
-        mySound.pause();
+        this.mySound.src = "/sound/b-s-o-peter-pan-la-gran-aventura.mp3"
+
+        this.mySound.play();
+        // mySound.pause();
+
     }
 }

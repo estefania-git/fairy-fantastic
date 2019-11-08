@@ -4,5 +4,6 @@ window.onload = function () {
         document.querySelector('#canvas').style.display = 'block'
 
         Game.init();
+
     };
 }
