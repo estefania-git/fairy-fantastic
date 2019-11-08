@@ -4,7 +4,7 @@ The project is the first video game created by me
 
 
 
-Construido con hammer_and_wrench
+Construido con 
 
 
 HTML,CSS Y JAVASCRIPT
@@ -24,4 +24,4 @@ Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo LICENSE.md 
 
 
 
-keyboard con heart por Ironhack blush
+
